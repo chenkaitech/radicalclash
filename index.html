@@ -8,28 +8,52 @@
     body {
       font-family: "Helvetica Neue", sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #fdfdfd;
       color: #333;
     }
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 1.5em;
-      text-align: center;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    nav a {
+      color: white;
+      margin-left: 1em;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
       padding: 2em;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
+    h2 {
+      text-align: center;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      margin-top: 1em;
+    }
     .screenshot {
-      display: block;
       width: 100%;
-      max-width: 600px;
-      margin: 1.5em auto;
       border: 1px solid #ddd;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .download-btn {
       display: inline-block;
@@ -39,7 +63,9 @@
       text-decoration: none;
       font-size: 1.1em;
       border-radius: 6px;
-      margin-top: 1em;
+      margin: 2em auto 0;
+      display: block;
+      width: max-content;
     }
     footer {
       text-align: center;
@@ -47,34 +73,47 @@
       font-size: 0.9em;
       color: #888;
     }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>组字大战</h1>
-    <p>选择组合部分，拼出新汉字！看看你能找到多少个呢？</p>
+    <nav>
+      <a href="support.html" target="_blank">Support</a>
+      <a href="privacy.html" target="_blank">Privacy</a>
+    </nav>
   </header>
 
   <section>
-    <h2>玩法介绍</h2>
+    <h2>选择组合部分，拼出新汉字！</h2>
     <p>《组字大战》是一款寓教于乐的汉字拼字益智游戏。玩家通过观察基础汉字的组成，从多个偏旁部首中选择合适的组合来拼出新汉字。</p>
+
     <ul>
       <li>支持简单与困难模式挑战</li>
       <li>涵盖常用 3500 汉字和通用 7000 汉字</li>
       <li>适合语文学习者、亲子互动、拼字爱好者</li>
     </ul>
 
-    <img class="screenshot" src="1.png" alt="App 截图 1">
-    <img class="screenshot" src="2.png" alt="App 截图 2">
-    <img class="screenshot" src="3.png" alt="App 截图 3">
+    <div class="grid">
+      <img class="screenshot" src="1.png" alt="App 截图 1">
+      <img class="screenshot" src="2.png" alt="App 截图 2">
+      <img class="screenshot" src="3.png" alt="App 截图 3">
+      <img class="screenshot" src="4.png" alt="App 截图 4">
+    </div>
 
-    <p style="text-align: center;">
-      <a class="download-btn" href="#">即将上线 App Store</a>
-    </p>
+    <a class="download-btn" href="#">即将上线 App Store</a>
   </section>
 
   <footer>
     &copy; 2025 组字大战. 保留所有权利。
   </footer>
+
 </body>
 </html>
